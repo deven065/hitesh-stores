@@ -1,3 +1,16 @@
+export interface Review {
+  id: string;
+  userName: string;
+  rating: number;
+  date: string;
+  title: string;
+  comment: string;
+  verified: boolean;
+  helpful: number;
+  size?: string;
+  fit?: 'Runs Small' | 'True to Size' | 'Runs Large';
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -18,6 +31,7 @@ export interface Product {
   reviewCount: number;
   material?: string;
   careInstructions?: string;
+  reviews: Review[];
 }
 
 export interface CartItem {
